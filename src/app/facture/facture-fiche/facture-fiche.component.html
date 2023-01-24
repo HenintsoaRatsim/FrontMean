@@ -1,0 +1,60 @@
+
+  <main class="main-content  mt-0" >
+    <section>
+      <div class="page-header min-vh-75">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 d-flex flex-column mx-auto">
+                <h1 style="padding-bottom: 20px;" *ngFor="let vam of voiture">Facture du voiture: {{vam.matricule}}</h1>
+              <div class="card card-plain mt-8">
+                
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            
+                            <th scope="col">Client</th>
+                            <th scope="col">Marque voiture</th>
+                            <th scope="col">Type voiture</th>
+                            <th scope="col">Réparation</th>
+                            <th scope="col">Date de réparation</th>
+                            <th scope="col">Prix (Ariary)</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let list of detailsReparation">
+                            
+                                <td *ngFor="let user of detailsUser"><i class="fa fa-user"></i> {{user.nom}} {{user.prenom}}</td>
+                                <td *ngFor="let vam of voiture">{{vam.marque}}</td>
+                            
+                            <td *ngFor="let vam of voiture">{{vam.type}}</td>
+                            <td>{{list.intitule}}</td>
+                            <td *ngFor="let detfac of detailsFacture">{{detfac | date: 'à HH:mm, le d MMMM yyyy'}}</td>
+                            <td>{{list.prix}}</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                      <div class="row">
+                        <div class="col-md-10">
+                          <div *ngIf="etat==0;then non else oui"></div>
+                          <ng-template #non><p><u>Etat facture:</u> <em style="color: red;"> Non payé</em></p></ng-template>
+                          <ng-template #oui><p><u>Etat facture:</u> <em style="color: red;"> Payé</em></p></ng-template>
+                        </div>
+                          
+                        <div class="col-md-2"  style="text-align: center;"><strong> Total: {{somme}} </strong></div>
+                      </div>
+                      
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  
