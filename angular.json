@@ -27,6 +27,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -103,4 +105,3 @@
   },
   "defaultProject": "m1p10mean-Henintsoa-Hasindranto"
 }
-
