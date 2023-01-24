@@ -27,6 +27,8 @@
               "src/assets"
             ],
             "styles": [
+              "assets/bootstrap/dist/js/bootstrap.min.js",
+              "assets/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -61,7 +63,7 @@
               "namedChunks": true
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
