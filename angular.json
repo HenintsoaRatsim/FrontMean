@@ -58,7 +58,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
+              "buildOptimizer": true,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
@@ -78,7 +78,7 @@
               "browserTarget": "m1p10mean-Henintsoa-Hasindranto:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "production"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
